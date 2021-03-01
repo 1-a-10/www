@@ -29,7 +29,14 @@ export default () => {
         </div>
 
         <div className={"navbar-menu " + (navIsOpened ? "is-active" : "")}>
-          <div className="navbar-start"></div>
+          <div className="navbar-start">
+            <Link className="navbar-item" to="/">
+              Accueil
+            </Link>
+            <Link className="navbar-item" to="/privacy">
+              Vie privée
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
