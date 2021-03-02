@@ -45,9 +45,19 @@ function HeroSection({ data }) {
 
                 <a
                   href="https://apps.apple.com/fr/app/1-%C3%A0-10/id1555319145"
+                  className="button is-primary is-rounded mt-3 mr-3"
+                >
+                  <span>Téléchargez pour iPhone</span>
+                  <span className="icon" role="img" aria-label="phone">
+                    📱
+                  </span>
+                </a>
+
+                <a
+                  href="https://play.google.com/store/apps/details?id=io.onetoten.onetoten"
                   className="button is-primary is-rounded mt-3"
                 >
-                  <span>Téléchargez l'app</span>
+                  <span>Téléchargez pour Android</span>
                   <span className="icon" role="img" aria-label="phone">
                     📱
                   </span>
