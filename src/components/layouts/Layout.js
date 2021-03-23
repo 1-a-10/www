@@ -35,8 +35,22 @@ function Layout(props) {
         <title>{title}</title>
         <meta
           name="viewport"
-          content="width=device-width, minimum-scale=1, user-scalable=no, minimal-ui"
+          content="width=device-width, minimum-scale=1, minimal-ui"
         />
+        <script type="application/ld+json">{`
+          {
+            "@context": "http://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "1 à 10",
+            "operatingSystem": "iOS, ANDROID",
+            "applicationCategory": "MobileApplication",
+            "downloadUrl": "https://apps.apple.com/fr/app/1-%C3%A0-10/id1555319145",
+            "offers": {
+              "@type": "Offer",
+              "price": "0"
+            }
+          }
+        `}</script>
       </Helmet>
       <main className={props.cssClasses}>{props.children}</main>
     </>
