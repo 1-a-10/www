@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 import "../../stylesheets/main.scss";
 
-export default (props) => {
+export default function Layout(props) {
   const staticQuery = graphql`
     query SiteQuery {
       site {
@@ -18,12 +18,12 @@ export default (props) => {
   return (
     <StaticQuery
       query={`${staticQuery}`}
-      render={(data) => <Layout static={data} {...props} />}
+      render={(data) => <LayoutComponent static={data} {...props} />}
     />
   );
-};
+}
 
-function Layout(props) {
+function LayoutComponent(props) {
   const title = props.title
     ? `${props.title} - ${props.static.site.siteMetadata.title}`
     : props.static.site.siteMetadata.title;
@@ -57,7 +57,7 @@ function Layout(props) {
   );
 }
 
-Layout.propTypes = {
+LayoutComponent.propTypes = {
   title: PropTypes.string,
   cssClasses: PropTypes.string,
 };

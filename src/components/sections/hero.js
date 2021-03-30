@@ -1,29 +1,7 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { StaticImage } from "gatsby-plugin-image";
 
-export default () => {
-  const staticQuery = graphql`
-    query {
-      splash: file(relativePath: { eq: "splash.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `;
-
-  return (
-    <StaticQuery
-      query={`${staticQuery}`}
-      render={(data) => <HeroSection data={data} />}
-    />
-  );
-};
-
-function HeroSection({ data }) {
+export function HeroSection() {
   return (
     <>
       <section className="hero">
@@ -65,8 +43,8 @@ function HeroSection({ data }) {
               </div>
 
               <div className="column is-offset-1-tablet">
-                <Img
-                  fluid={data.splash.childImageSharp.fluid}
+                <StaticImage
+                  src="../../images/splash.png"
                   alt="Splash screen"
                 />
               </div>
