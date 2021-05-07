@@ -19,6 +19,7 @@ export function Nav() {
               alt="Logo"
               width={96}
               height={96}
+              imgStyle={{ borderRadius: "7px" }}
             />
           </Link>
 
