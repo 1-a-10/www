@@ -4,7 +4,7 @@ import { Nav } from "../components/layouts/Nav";
 
 export default function PrivacyPage() {
   return (
-    <Layout>
+    <Layout title="Vie privée">
       <Nav />
       <section className="section">
         <div className="container content">

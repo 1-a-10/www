@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "1 à 10",
+    description:
+      "Le 1 à 10 est un quiz pour jouer en famille ou entre amis. Chaque joueur doit s'auto-estimer sur un thème de la vie de tous les jours (fromage, bière, devinettes, etc...). Plus la note est haute, plus c'est difficile, mais plus tu gagnes de points !",
     siteUrl: "https://1a10.app",
   },
   plugins: [
