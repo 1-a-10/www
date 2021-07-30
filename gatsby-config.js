@@ -6,11 +6,11 @@ module.exports = {
     siteUrl: "https://1a10.app",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -28,9 +28,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images`,
       },
-      __key: "images",
     },
   ],
 };
