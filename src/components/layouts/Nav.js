@@ -42,6 +42,9 @@ export function Nav() {
             <Link className="navbar-item" to="/privacy">
               Vie privée
             </Link>
+            <Link className="navbar-item" to="/contribute">
+              Contribuer
+            </Link>
           </div>
         </div>
       </div>
